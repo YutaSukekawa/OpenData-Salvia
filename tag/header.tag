@@ -11,28 +11,22 @@
 
 		<div class="container">
 			<div class="row">
-				<div id="mi_01" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
-					<i class="fas fa-home"></i>
+				<div id="mi-00" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					{ menu_items[0] }
 				</div>
-				<div id="mi_02" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
-					<i class="fas fa-info"></i>
+				<div id="mi-01" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					{ menu_items[1] }
 				</div>
-				<div id="mi_03" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
-					<i class="fas fa-search"></i>
+				<div id="mi-02" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					{ menu_items[2] }
 				</div>
-				<div id="mi_04" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
-					<i class="fas fa-question"></i>
+				<div id="mi-03" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					{ menu_items[3] }
 				</div>
-				<div id="mi_05" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
-					<i class="far fa-chart-bar"></i>
+				<div id="mi-04" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					{ menu_items[4] }
 				</div>
-				<div id="mi_06" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
-					<i class="fas fa-mobile"></i>
+				<div id="mi-05" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					{ menu_items[5] }
 				</div>
 			</div>
@@ -55,6 +49,7 @@
 			'スマートフォン向け'
 		]
 
+		/* メニュー項目 アイコン */
 		var i_class_array = [
 			'<i class="fas fa-home"></i> ',
 			'<i class="fas fa-info"></i> ',
@@ -67,20 +62,25 @@
 		/* メニュー文字ウェーブ設定 */
 		this.on('mount', function() {
 
-			var i = 0, j, innerHTML_str
+			/* 宣言・初期化 */
+			var i = 0, j, innerHTML_str, length_1 = this.menu_items.length, length_2
 
-			while(i < this.menu_items.length) {
+			/* this.menu_items のリスト分繰り返し */
+			while(i < length_1) {
 
-				innerHTML_str = '<span class="mi">' + i_class_array[i]
+				/* 初期化 */
+				innerHTML_str = '<span class="mi">' + i_class_array[i] // Font Awesome class
 				j = 0
-				while(j < this.menu_items[i].length) {
-					innerHTML_str += '<span>' + this.menu_items[i][j] + '</span>'
+				length_2 = this.menu_items[i].length
+
+				/* this.menu_items[i] のリスト分繰り返し */
+				while(j < length_2) {
+					innerHTML_str += '<span>' + this.menu_items[i][j] + '</span>' // 一文字ずつ <span> タグでくくる
 					j++
 				}
 
 				innerHTML_str += '</span>'
-
-				document.getElementById('mi_0' + (i + 1)).innerHTML = innerHTML_str
+				document.getElementById('mi-0' + i).innerHTML = innerHTML_str // innerHTML を行う
 				i++
 			}
 
