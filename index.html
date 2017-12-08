@@ -22,9 +22,6 @@
                 height: 100%;   /* 縦の高さを100% */
                 width: 100%;    /* 横の幅を100% */
 
-                /* サイト全体の基本文字色 */
-                /*color: #333;*/
-
                 /* サイト背景 */
                 background-image: linear-gradient(45deg, rgba(104, 175, 104, 0.5), rgba(59, 155, 179, 0.5)),
                                   url(img/header-cover.jpg);
@@ -69,7 +66,7 @@
                         var osm_container = document.getElementById('container');
                         var oc_margin_top = Math.floor((main_height - osm_container.clientHeight) / 2);
                         osm_container.style.marginTop = oc_margin_top + 'px';
-                        osm_container.style.borderRadius = 6 + 'px';
+                        document.getElementById('map').style.borderRadius = 6 + 'px';
 
                         clearInterval(id);
                     }
