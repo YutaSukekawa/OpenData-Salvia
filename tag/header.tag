@@ -1,16 +1,41 @@
 <header>
 
-	<!-- <div class="row cover box-shadow text-white">
-		<div class="col-4"><h1 class="title-text display-4 my-2 pl-5">{ big_heading }</h1></div>
-		<div class="col-8"><h2 class="title-text display-5 my-2 pl-2">{ sub_heading }</h2></div>
-	</div> -->
-
-	<div id="header" class="cover box-shadow text-white">
+	<div id="header" class="cover bs text-white">
 		<div class="text-center">
-			<h1 class="d-none d-md-inline-block title-text display-4 pt-3 pb-3">{ big_heading }</h1>
-			<h1 class="title-text-res d-md-none display-4 pt-3">{ big_heading }</h1>
-			<h2 class="d-none d-md-inline-block title-text font-weight-normal display-5 pb-3 pl-4">{ sub_heading_ja }</h2>
+			<!-- responsive 対応 -->
+			<h1 class="d-none d-md-inline-block title-text display-4 pt-3 pb-1">{ big_heading }</h1>
+			<h1 class="title-text-res d-md-none display-4 pt-1">{ big_heading }</h1>
+			<h2 class="d-none d-md-inline-block title-text font-weight-normal display-5 pb-1 pl-4">{ sub_heading_ja }</h2>
 			<h2 class="title-text-res d-md-none font-weight-normal display-5 pb-3">{ sub_heading_ja }</h2>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="mi text-center col-2 d-none d-md-inline-block pb-2">
+					<i class="fas fa-home"></i>
+					{ menu_items[0] }
+				</div>
+				<div class="mi text-center col-2 d-none d-md-inline-block pb-2">
+					<i class="fas fa-info"></i>
+					{ menu_items[1] }
+				</div>
+				<div class="mi text-center col-2 d-none d-md-inline-block pb-2">
+					<i class="fas fa-search"></i>
+					{ menu_items[2] }
+				</div>
+				<div class="mi text-center col-2 d-none d-md-inline-block pb-2">
+					<i class="fas fa-question"></i>
+					{ menu_items[3] }
+				</div>
+				<div class="mi text-center col-2 d-none d-md-inline-block pb-2">
+					<i class="far fa-chart-bar"></i>
+					{ menu_items[4] }
+				</div>
+				<div class="mi text-center col-2 d-none d-md-inline-block pb-2">
+					<i class="fas fa-mobile"></i>
+					{ menu_items[5] }
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -20,6 +45,9 @@
 		this.sub_heading_en = 'Let\'s find it!'
 		this.sub_heading_ja = 'さあ 見つけよう！'
 
+		/* メニュー項目 */
+		this.menu_items = ['ホーム', 'このサイトについて', '見つける！', 'チュートリアル', 'オープンデータとは', 'スマートフォン向け']
+
 	</script>
 
 	<style>
@@ -28,20 +56,21 @@
 			z-index: 10;
 		}
 
-		/*cover*/
+		/* cover */
 		div.cover {
-			background-color: rgba(255, 255, 255, 0.3);
+			background-color: rgba(33, 33, 33, 0.3);
 		}
 
-		/*box-shadow*/
-		.box-shadow {
-			-moz-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
-			-webkit-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
-			-o-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
-			-ms-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
+		/* box-shadow */
+		.bs {
+			-moz-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+			-webkit-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+			-o-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+			-ms-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
 		}
 
-		.title-text {
+		/* タイトル文字 */
+		h1.title-text {
 			/*font-family: cursive;*/
 			font-size: 5vw;
 			font-family: 'Slabo 27px', serif;
@@ -53,7 +82,7 @@
 			font-family: "Mplus 1p";
 		}
 
-		.title-text-res {
+		h1.title-text-res {
 			font-size: 10vw;
 			font-family: 'Slabo 27px', serif;
 		}
@@ -61,6 +90,18 @@
 		h2.title-text-res {
 			font-size: 3vw;
 			font-family: "Mplus 1p";
+		}
+
+		.container {
+			padding-left: 2%;
+			padding-right: 2%;
+		    width: 100%;
+		}
+
+		/* menu_item */
+		.mi {
+			font-size: 1.2vw;
+			cursor: pointer;
 		}
 
 	</style>
