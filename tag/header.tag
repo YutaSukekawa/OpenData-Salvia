@@ -3,35 +3,35 @@
 	<div id="header" class="cover bs text-white">
 		<div class="text-center">
 			<!-- responsive 対応 -->
-			<h1 class="d-none d-md-inline-block title-text display-4 pt-3">{ big_heading }</h1>
+			<h1 class="d-none d-md-inline-block title-text display-4 pt-3"><span class="site-title">{ big_heading }</span></h1>
 			<h1 class="title-text-res d-md-none display-4 pt-1">{ big_heading }</h1>
 			<h2 class="d-none d-md-inline-block title-text font-weight-normal display-5 pl-4">{ sub_heading_ja }</h2>
-			<h2 class="title-text-res d-md-none font-weight-normal display-5 pb-3">{ sub_heading_ja }</h2>
+			<h2 class="title-text-res d-md-none font-weight-normal display-5 pb-2">{ sub_heading_ja }</h2>
 		</div>
 
 		<div class="container">
 			<div class="row">
-				<div id="mi_01" class="mi mi-s text-center col-2 d-none d-md-inline-block pt-1 pb-2">
+				<div id="mi_01" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					<i class="fas fa-home"></i>
 					{ menu_items[0] }
 				</div>
-				<div id="mi_02" class="mi text-center col-2 d-none d-md-inline-block pt-1 pb-2">
+				<div id="mi_02" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					<i class="fas fa-info"></i>
 					{ menu_items[1] }
 				</div>
-				<div id="mi_03" class="mi text-center col-2 d-none d-md-inline-block pt-1 pb-2">
+				<div id="mi_03" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					<i class="fas fa-search"></i>
 					{ menu_items[2] }
 				</div>
-				<div id="mi_04" class="mi text-center col-2 d-none d-md-inline-block pt-1 pb-2">
+				<div id="mi_04" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					<i class="fas fa-question"></i>
 					{ menu_items[3] }
 				</div>
-				<div id="mi_05" class="mi text-center col-2 d-none d-md-inline-block pt-1 pb-2">
+				<div id="mi_05" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					<i class="far fa-chart-bar"></i>
 					{ menu_items[4] }
 				</div>
-				<div id="mi_06" class="mi text-center col-2 d-none d-md-inline-block pt-1 pb-2">
+				<div id="mi_06" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					<i class="fas fa-mobile"></i>
 					{ menu_items[5] }
 				</div>
@@ -71,12 +71,14 @@
 
 			while(i < this.menu_items.length) {
 
-				innerHTML_str = i_class_array[i]
+				innerHTML_str = '<span class="mi">' + i_class_array[i]
 				j = 0
 				while(j < this.menu_items[i].length) {
 					innerHTML_str += '<span>' + this.menu_items[i][j] + '</span>'
 					j++
 				}
+
+				innerHTML_str += '</span>'
 
 				document.getElementById('mi_0' + (i + 1)).innerHTML = innerHTML_str
 				i++
@@ -94,7 +96,7 @@
 
 		/* cover */
 		div.cover {
-			background-color: rgba(33, 33, 33, 0.3);
+			background-color: rgba(33, 33, 33, 0.4);
 		}
 
 		/* box-shadow */
@@ -103,6 +105,10 @@
 			-webkit-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
 			-o-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
 			-ms-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+		}
+
+		.site-title {
+			cursor: pointer;
 		}
 
 		/* タイトル文字 */
@@ -141,6 +147,7 @@
 			transition: all .3s;
 		}
 
+		/* menu_item hover 時に下線を引く */
 		.mi::before,
 		.mi::after {
 			bottom: 0;
@@ -153,12 +160,12 @@
 		}
 
 		.mi::before {
-			background: linear-gradient(to right, rgb(104, 175, 104), rgb(59, 155, 179));
+			background-color: tomato;
 			left: 50%;
 		}
 
 		.mi::after {
-			background: linear-gradient(to right, rgb(59, 155, 179), rgb(104, 175, 104));
+			background-color: tomato;
 			right: 50%;
 		}
 
@@ -171,9 +178,10 @@
 			width: 50%;
 		}
 
+		/* hover 時に文字をウェーブ */
 		.mi:hover span {
 			display: inline-block;
-			animation: wave-text 1s ease-in-out infinite;
+			animation: wave 1s ease-in-out infinite;
 		}
 
 		/* アニメーションの時間をずらす */
@@ -187,12 +195,12 @@
 		.mi:hover span:nth-of-type(8){ animation-delay: 0.7s; }
 		.mi:hover span:nth-of-type(9){ animation-delay: 0.8s; }
 
-		@keyframes wave-text {
+		@keyframes wave {
 			0% {
 				transform: translateY(0em);
 			}
 			60% {
-				transform: translateY(-0.8em);
+				transform: translateY(-0.6em);
 			}
 			100% {
 				transform: translateY(0em);
