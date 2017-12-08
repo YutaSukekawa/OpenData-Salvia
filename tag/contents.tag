@@ -3,13 +3,6 @@
     <div id="container">
         <div id="map"></div>
     </div>
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col-3 bg-primary">1</div>
-            <div class="col-6 bg-success">map</div>
-            <div class="col-3 bg-info">3</div>
-        </div>
-    </div> -->
 
     <script>
         this.on('mount', function() {
