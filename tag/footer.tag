@@ -12,6 +12,8 @@
             position: fixed;
             bottom: 0;
 
+            font-family: 'Slabo 27px', serif;
+
             color: rgba(255, 255, 255, 0.4);
             background-color: rgba(0, 0, 0, 0.4);
         }

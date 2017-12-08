@@ -6,14 +6,21 @@
 	</div> -->
 
 	<div id="header" class="cover box-shadow text-white">
-		<h1 class="title-text display-4 pt-3 pb-1 pl-5">{ big_heading }</h1>
-		<h2 class="title-text display-5 pb-3 pl-5">{ sub_heading }</h2>
+		<div class="text-center">
+			<h1 class="title-text display-4 pt-3 pb-1 pl-5">{ big_heading }</h1>
+			<h2 class="title-text font-weight-normal display-5 pb-3 pl-4">{ sub_heading_ja }</h2>
+		</div>
+		<!-- <div class="row">
+			<div class="col-2"></div>
+			<div class="col-10"><h2 class="title-text display-5 pb-3">{ sub_heading }</h2></div>
+		</div> -->
 	</div>
 
 	<script>
 
 		this.big_heading = 'OpenData Salvia'
-		this.sub_heading = 'Let\'s find it!'
+		this.sub_heading_en = 'Let\'s find it!'
+		this.sub_heading_ja = 'さあ 見つけよう！'
 
 		// this.on('mount', function() {
         //
@@ -40,14 +47,14 @@
 			-ms-box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.3);
 		}
 
-		h1.title-text {
+		.title-text {
 			/*font-family: cursive;*/
 			font-family: 'Slabo 27px', serif;
+			display: inline-block;
 		}
 
 		h2.title-text {
-			/*font-style: italic;*/
-			font-family: 'Slabo 27px', serif;
+			font-family: "Mplus 1p";
 		}
 
 	</style>
