@@ -7,13 +7,11 @@
 
 	<div id="header" class="cover box-shadow text-white">
 		<div class="text-center">
-			<h1 class="title-text display-4 pt-3 pb-1 pl-5">{ big_heading }</h1>
-			<h2 class="title-text font-weight-normal display-5 pb-3 pl-4">{ sub_heading_ja }</h2>
+			<h1 class="d-none d-md-inline-block title-text display-4 pt-3 pb-3">{ big_heading }</h1>
+			<h1 class="d-md-none title-text display-4 pt-3 pb-1">{ big_heading }</h1>
+			<h2 class="d-none d-md-inline-block title-text font-weight-normal display-5 pb-3 pl-4">{ sub_heading_ja }</h2>
+			<h2 class="title-text-res d-md-none font-weight-normal display-5 pb-3">{ sub_heading_ja }</h2>
 		</div>
-		<!-- <div class="row">
-			<div class="col-2"></div>
-			<div class="col-10"><h2 class="title-text display-5 pb-3">{ sub_heading }</h2></div>
-		</div> -->
 	</div>
 
 	<script>
@@ -21,15 +19,6 @@
 		this.big_heading = 'OpenData Salvia'
 		this.sub_heading_en = 'Let\'s find it!'
 		this.sub_heading_ja = 'さあ 見つけよう！'
-
-		// this.on('mount', function() {
-        //
-		// 	var text = document.getElementById('main')
-        //
-		// 	text.addEventListener('click', function() {
-		// 		alert('this click')
-		// 	})
-		// })
 
 	</script>
 
@@ -49,11 +38,18 @@
 
 		.title-text {
 			/*font-family: cursive;*/
+			font-size: 5vw;
 			font-family: 'Slabo 27px', serif;
 			display: inline-block;
 		}
 
 		h2.title-text {
+			font-size: 2vw;
+			font-family: "Mplus 1p";
+		}
+
+		.title-text-res {
+			font-size: 3vw;
 			font-family: "Mplus 1p";
 		}
 
