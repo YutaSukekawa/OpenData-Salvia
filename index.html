@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+    	<!-- Required meta tags -->
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	    <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css">
+
+        <!-- Web Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Satisfy">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
+
+    	<style>
+	        html, body {
+
+                /* 基本設定 */
+                margin: 0;  /* 余白の削除 */
+                padding: 0; /* 余白の削除 */
+                height: 100%;   /* 縦の高さを100% */
+                width: 100%;    /* 横の幅を100% */
+
+                /* サイト全体の基本文字色 */
+                /*color: #333;*/
+
+                /* サイト背景 */
+                background-image: linear-gradient(45deg, rgba(104, 175, 104, 0.5), rgba(59, 155, 179, 0.5)),
+                                  url(img/header-cover.jpg);
+                background-size: cover;
+
+            }
+	    </style>
+
+        <title>OpenData Salvia</title>
+    </head>
+
+    <body>
+        <div id="contents">
+            <header></header>
+            <contents></contents>
+            <footer></footer>
+        </div>
+
+        <!-- Bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="./bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+
+        <!-- Mapbox -->
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.42.2/mapbox-gl.css' rel='stylesheet' />
+
+        <!-- Riot -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.7.3/riot+compiler.min.js"></script>
+        <script src="./js/import.js"></script>
+        <script>riot.mount('*');</script>
+
+        <script>
+            window.onload = function () {
+
+                /* OSM container の位置を調整する */
+                var header_height = document.getElementById('header').clientHeight;
+                var footer_rect = document.getElementById('footer').getBoundingClientRect();
+                var main_height = footer_rect.top - header_height;
+                var osm_container = document.getElementById('container');
+                var oc_margin_top = Math.floor((main_height - osm_container.clientHeight) / 2);
+                osm_container.style.marginTop = oc_margin_top + 'px';
+                
+            };
+    	</script>
+
+    </body>
+
+</html>

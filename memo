@@ -1,0 +1,43 @@
+<%-- <h2 class="font-weight-normal display-4">Hello Bootstrap</h2>
+<div id="main" class="text-center bg-primary">
+    { text }
+</div>
+<div id="main" class="text-right bg-success text-warning">
+    { text }
+</div>
+<div id="main" class="text-center bg-info font-weight-bold">
+    { text }
+</div>
+<div id="main" class="text-center bg-inverse text-white">
+    { text }
+</div> --%>
+
+<!-- 要素の変更 -->
+<div class="box-container">
+    <div class="bg-primary w-25 pt-3">BOX</div>
+</div>
+
+<div class="box-container">
+    <div class="bg-success w-75 my-0 mx-auto">BOX</div>
+</div>
+
+<!-- ボタン -->
+<button class="btn btn-primary">{ text }</button>
+<button class="btn btn-info btn-sm">{ text }</button>
+<button class="btn btn-danger btn-lg">{ text }</button>
+
+<!--
+[plm][location]-[size]
+
+location:
+- t, b, l, r
+- x, y
+
+size:
+- 0
+- 1: 0.25rem
+- 2: 0.5rem
+- 3: 1.0rem
+- 4: 1.5rem
+- auto
+-->
