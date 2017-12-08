@@ -2,7 +2,7 @@
     <div id="footer" class="text-center py-1">{ footer_text }</div>
 
     <script>
-        this.footer_text = 'Copyright © 2017 Yuta Sukekawa All Rights Reserved.'
+        this.footer_text = '© 2017 Yuta Sukekawa'
     </script>
 
     <style>
