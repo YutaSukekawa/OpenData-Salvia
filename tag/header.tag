@@ -51,12 +51,12 @@
 
 		/* メニュー項目 アイコン */
 		var i_class_array = [
-			'<i class="fas fa-home"></i> ',
-			'<i class="fas fa-info"></i> ',
-			'<i class="fas fa-search"></i> ',
-			'<i class="fas fa-question"></i> ',
-			'<i class="far fa-chart-bar"></i> ',
-			'<i class="fas fa-mobile"></i> ',
+			'<i class="fas fa-home i-shake"></i> ',
+			'<i class="fas fa-info i-shake"></i> ',
+			'<i class="fas fa-search i-shake"></i> ',
+			'<i class="fas fa-question i-shake"></i> ',
+			'<i class="far fa-chart-bar i-shake"></i> ',
+			'<i class="fas fa-mobile i-shake"></i> ',
 		]
 
 		/* メニュー文字ウェーブ設定 */
@@ -69,7 +69,7 @@
 			while(i < length_1) {
 
 				/* 初期化 */
-				innerHTML_str = '<span class="mi">' + i_class_array[i] // Font Awesome class
+				innerHTML_str = '<span class="mi" onclick="MenuItem.menuItemOnClick(' + i + ')">' + i_class_array[i] // Font Awesome class
 				j = 0
 				length_2 = this.menu_items[i].length
 
@@ -178,6 +178,11 @@
 			width: 50%;
 		}
 
+		.mi:hover .i-shake {
+			display: inline-block;
+			animation: shake 3s ease infinite;
+		}
+
 		/* hover 時に文字をウェーブ */
 		.mi:hover span {
 			display: inline-block;
@@ -196,15 +201,20 @@
 		.mi:hover span:nth-of-type(9){ animation-delay: 0.8s; }
 
 		@keyframes wave {
-			0% {
-				transform: translateY(0em);
-			}
-			60% {
-				transform: translateY(-0.6em);
-			}
-			100% {
-				transform: translateY(0em);
-			}
+			0% {transform: translateY(0em);}
+			60% {transform: translateY(-0.6em);}
+			100% {transform: translateY(0em);}
+		}
+
+		@keyframes shake {
+			0% { transform:translateY(0) }
+			5% { transform:translateY(0) }
+			10% { transform:translateY(0) }
+			20% { transform:translateY(-0.7em) }
+			25% { transform:translateY(0) }
+			30% { transform:translateY(-0.7em) }
+			50% { transform:translateY(0) }
+			100% { transform:translateY(0) }
 		}
 
 	</style>

@@ -14,6 +14,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
         <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" />
 
+        <!-- My JS -->
+        <script type="text/JavaScript" src="./js/site-init.js"></script>
+        <script type="text/JavaScript" src="./js/menu-item-onclick.js"></script>
+
     	<style>
 	        html, body {
 
@@ -24,12 +28,17 @@
                 width: 100%;    /* 横の幅を100% */
 
                 /* サイト背景 */
-                background-image: linear-gradient(45deg, rgba(104, 175, 104, 0.5), rgba(59, 155, 179, 0.5)),
+                background-image: linear-gradient(45deg, rgba(104, 175, 104, 0.6), rgba(59, 155, 179, 0.6)),
                                   url(img/header-cover.jpg);
                 background-size: cover;
 
             }
 	    </style>
+
+        <!-- グローバル変数宣言 -->
+        <script>
+            var map;
+        </script>
 
         <title>OpenData Salvia</title>
     </head>
@@ -59,22 +68,7 @@
 
         <script>
             window.onload = function () {
-
-                var id = setInterval(function() {
-                    if(document.getElementById('footer') != null) {
-
-                        /* OSM container の位置を調整する */
-                        var header_height = document.getElementById('header').clientHeight;
-                        var footer_rect = document.getElementById('footer').getBoundingClientRect();
-                        var main_height = footer_rect.top - header_height;
-                        var osm_container = document.getElementById('container');
-                        var oc_margin_top = Math.floor((main_height - osm_container.clientHeight) / 2);
-                        osm_container.style.marginTop = oc_margin_top + 'px';
-
-                        clearInterval(id);
-                    }
-                }, 10);
-
+                siteInit();
             };
     	</script>
 
