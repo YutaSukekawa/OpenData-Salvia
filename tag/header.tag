@@ -33,6 +33,7 @@
 		</div>
 	</div>
 
+	<!-- JavaScript -->
 	<script>
 
 		this.big_heading = 'OpenData Salvia'
@@ -88,6 +89,7 @@
 
 	</script>
 
+	<!-- CSS -->
 	<style>
 
 		#header {

@@ -22,7 +22,7 @@
             left: 0;
             margin: auto;
 
-            z-index: 8;
+            /*z-index: 8;*/
         }
 
         div#map {
@@ -46,6 +46,7 @@
 
             /* 外枠 */
             /*border: 1px solid gray;*/
+
         }
     </style>
 
