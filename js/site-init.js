@@ -1,6 +1,8 @@
 /* サイトの初期化 riot tag のマウント後, 呼び出す */
 function siteInit() {
 
+    alert(document.getElementById('header').clientHeight);
+
     /* start 画面の表示 */
     var header_height = document.getElementById('header').clientHeight;
     var footer_rect = document.getElementById('footer').getBoundingClientRect();
