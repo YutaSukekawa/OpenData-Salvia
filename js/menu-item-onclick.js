@@ -61,7 +61,7 @@ class MenuItem {
         var header_height = document.getElementById('header').clientHeight;
         var footer_rect = document.getElementById('footer').getBoundingClientRect();
         var main_height = footer_rect.top - header_height;
-        var osm_container = document.getElementById('container');
+        var osm_container = document.getElementById('map');
         var oc_margin_top = Math.floor((main_height - osm_container.clientHeight) / 2);
         osm_container.style.marginTop = oc_margin_top + 'px';
 
