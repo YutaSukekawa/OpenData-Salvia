@@ -2,7 +2,7 @@
     <div id="footer" class="text-center py-1">{ footer_text }</div>
 
     <script>
-        this.footer_text = '© 2017 Yuta Sukekawa'
+        this.footer_text = 'OpenData Salvia ver. 1.0.0 © 2017 Yuta Sukekawa.'
     </script>
 
     <style>

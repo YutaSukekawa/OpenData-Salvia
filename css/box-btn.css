@@ -1,0 +1,91 @@
+.box-btn {
+
+    position: relative;
+    color: white;
+
+    font-family: "Mplus 1p";
+    font-size: 1.1vw;
+
+    width: 100%;
+    border: 2px solid white;
+    cursor: pointer;
+
+}
+
+.box-btn::before {
+
+    margin-left: 0;
+
+    left: 0; /* bootstrap 用 */
+
+    position: absolute;
+    display:block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+
+    z-index: -1;
+
+    transition: all .2s;
+
+    animation: btn-anim-out .2s ease-in-out forwards;
+
+}
+
+.box-btn:hover::before {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+
+    animation: btn-anim .5s ease-in-out both;
+
+}
+
+.box-btn:active::before {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+
+    /*transition: 0s*/
+    animation: btn-anim-click .2s ease-in-out forwards;
+}
+
+@keyframes btn-anim {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(0, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1, 1);
+    }
+
+}
+
+@keyframes btn-anim-out {
+    0% {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1, 1);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes btn-anim-click {
+    0% {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1, 1);
+    }
+
+    100% {
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0);
+        transform: scale(1.5, 2);
+    }
+}

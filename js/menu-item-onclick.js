@@ -46,11 +46,11 @@ class MenuItem {
 
     /* MenuItem の class メソッド private メソッドの作り方誰か教えてー */
     static home() {
-        alert('ホーム');
+        // alert('ホーム');
     }
 
     static aboutThisSite() {
-        alert('このサイトについて');
+        // alert('このサイトについて');
     }
 
     static find() {
@@ -79,6 +79,11 @@ class MenuItem {
             document.getElementById('start-div').remove();
         }
 
+        /* もし, divタグ start-container が存在したら削除 */
+        if(document.getElementById('start-container')) {
+            document.getElementById('start-container').remove();
+        }
+
         /* OSM を表示する */
         mapboxgl.accessToken = 'pk.eyJ1IjoieXV0YXN1a2VrYXdhIiwiYSI6ImNqN3U4dm9zeDI5a3EzMm8zM3Zha3N0YXMifQ.7c2R5J9mZpJi2Y1dU5AENw';
         var map_style = 'mapbox://styles/mapbox/streets-v9';
@@ -98,14 +103,14 @@ class MenuItem {
     }
 
     static tutorial() {
-        alert('チュートリアル');
+        // alert('チュートリアル');
     }
 
     static aboutOpenData() {
-        alert('オープンデータとは');
+        // alert('オープンデータとは');
     }
 
     static forMobile() {
-        alert('スマートフォン向け');
+        // alert('スマートフォン向け');
     }
 }
