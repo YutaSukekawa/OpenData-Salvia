@@ -69,8 +69,7 @@ function windowOnScroll() {
         else {
 
             if (y === 0) {
-                    $('#footer').fadeIn(100);
-                }
+                $('#footer').fadeIn(100);
             }else {
                 $('#footer').fadeOut(100);
             }
