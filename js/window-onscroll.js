@@ -18,7 +18,14 @@ function windowOnScroll() {
         }
         else {
             // $('#footer').fadeIn(100);
-            $('#arrow-up').fadeOut(300);
+
+            if (y == 0) {
+                $('#footer').fadeIn(100);   // firefox ちらつき
+            }else {
+                // $('#footer').fadeOut(100);  // firefox 正常
+            }
+
+            $('#arrow-up').fadeOut(300); // firefox 正常
         }
 
         /* アンダーコンテンツ 1 が見えてきたら */
@@ -61,21 +68,15 @@ function windowOnScroll() {
 
             if (!scroll_anime_flag) {
                 scroll_anime_flag = true;
-                $('#footer').fadeIn(100);
-                $('#arrow-down').fadeOut(300);
+                $('#footer').fadeIn(100);       // firefox ちらつき
+                $('#arrow-down').fadeOut(300);  // firefox 正常
             }
         }
         /*それ以外のスクロールの位置の場合 */
         else {
-
-            if (y === 0) {
-                $('#footer').fadeIn(100);
-            }else {
-                $('#footer').fadeOut(100);
-            }
-
             if (!scroll_anime_flag) {
                 scroll_anime_flag = true;
+                if (y >= 10) { $('#footer').fadeOut(100); } // firefox 正常
                 $('#arrow-down').fadeIn(300);
             }
         }
