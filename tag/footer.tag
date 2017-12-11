@@ -22,6 +22,9 @@
             width: 100%;
             position: fixed;
             bottom: 0;
+
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
         }
 
         #footer {
@@ -36,6 +39,9 @@
             background-color: rgba(0, 0, 0, 0.4);
 
             z-index: 9;
+
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
         }
     </style>
 </footer>

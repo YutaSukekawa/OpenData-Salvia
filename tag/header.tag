@@ -104,6 +104,9 @@
 			display: none;
 			position: fixed;
 			color: #336699;
+
+			-webkit-transform: translate3d(0,0,0);
+			transform: translate3d(0,0,0);
 		}
 
 		/* cover */
