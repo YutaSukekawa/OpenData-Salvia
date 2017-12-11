@@ -51,6 +51,7 @@ class MenuItem {
 
     static aboutThisSite() {
         // alert('このサイトについて');
+        $("html,body").animate({scrollTop:$('#under-area-01-top').offset().top});
     }
 
     static find() {
@@ -107,10 +108,12 @@ class MenuItem {
     }
 
     static aboutOpenData() {
+        $("html,body").animate({scrollTop:$('#under-area-02-top').offset().top});
         // alert('オープンデータとは');
     }
 
     static forMobile() {
+        $("html,body").animate({scrollTop:$('#under-area-03-top').offset().top});
         // alert('スマートフォン向け');
     }
 }

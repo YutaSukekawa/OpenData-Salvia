@@ -28,6 +28,7 @@ function windowOnScroll() {
         }
         else if (y < page_view_point) {
             $('#page-local-text').fadeOut(100);
+            $('#under-area-01').fadeOut(500);
         }
         else {
             $('#under-area-01').fadeOut(500);
@@ -71,5 +72,5 @@ function windowOnScroll() {
         }
 
     });
-    
+
 }
