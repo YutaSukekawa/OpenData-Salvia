@@ -65,8 +65,11 @@ function windowOnScroll() {
 
         /*スクロールの位置が下部5%の範囲に来た場合 */
         if ((scrollHeight - scrollPosition) / scrollHeight < 0.03) {
-            $('#footer').fadeIn(100);     // firefox ちらつき
-            $('#arrow-down').fadeOut(300);  // firefox 正常
+            if (!scroll_anime_flag) {
+                scroll_anime_flag = true;
+                $('#footer').fadeIn(100);     // firefox ちらつき
+                $('#arrow-down').fadeOut(300);  // firefox 正常
+            }
         }
         /*それ以外のスクロールの位置の場合 */
         else {
