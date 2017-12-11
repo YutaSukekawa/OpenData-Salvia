@@ -5,11 +5,10 @@ function windowOnScroll() {
 
         /* スクロール量 */
         var y = jQuery(this).scrollTop();
+        console.log(scroll_anime_flag_footer);
 
         var scrollHeight = $(document).height();
         var scrollPosition = $(window).height() + y;
-
-        var scroll_anime_flag = false;
 
         /* 少しでも下にスクロールした場合 */
         if (y >= 10) {
@@ -65,21 +64,29 @@ function windowOnScroll() {
 
         /*スクロールの位置が下部5%の範囲に来た場合 */
         if ((scrollHeight - scrollPosition) / scrollHeight < 0.03) {
-            if (!scroll_anime_flag) {
-                scroll_anime_flag = true;
-                $('#footer').fadeIn(100);     // firefox 正常
-                $('#arrow-down').fadeOut(300);  // firefox ちらつき
-            }
+            // if (!scroll_anime_flag_footer) {
+            //     scroll_anime_flag_footer = true;
+                $('#footer').fadeIn(100);      // firefox 正常
+            //     setTimeout(function() {
+            //         scroll_anime_flag_footer = false;
+            //     }, 100);
+            //
+            // }
+            $('#arrow-down').fadeOut(300);  // firefox 正常
         }
         /*それ以外のスクロールの位置の場合 */
         else {
-            if (!scroll_anime_flag) {
-                scroll_anime_flag = true;
-                if (y >= 10) {
-                    $('#footer').fadeOut(100);  // firefox 正常
-                    $('#arrow-down').fadeIn(300);
-                }
+            if (y >= 10) {
+            //     if (!scroll_anime_flag_footer) {
+            //         scroll_anime_flag_footer = true;
+                    $('#footer').fadeOut(100);      // firefox 正常
+                //     setTimeout(function() {
+                //         scroll_anime_flag_footer = false;
+                //     }, 100);
+                // }
+                $('#arrow-down').fadeIn(300);   // ちらつき
             }
+
         }
 
     });
