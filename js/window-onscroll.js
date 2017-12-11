@@ -9,7 +9,7 @@ function windowOnScroll() {
         var scrollHeight = $(document).height();
         var scrollPosition = $(window).height() + y;
 
-        var animate_flag = false;
+        var scroll_anime_flag = false;
 
         /* 少しでも下にスクロールした場合 */
         if (y >= 10) {
@@ -59,8 +59,8 @@ function windowOnScroll() {
         /*スクロールの位置が下部5%の範囲に来た場合 */
         if ((scrollHeight - scrollPosition) / scrollHeight < 0.03) {
 
-            if (!animate_flag) {
-                animate_flag = true;
+            if (!scroll_anime_flag) {
+                scroll_anime_flag = true;
                 $('#footer').fadeIn(100);
                 $('#arrow-down').fadeOut(300);
             }
@@ -69,15 +69,16 @@ function windowOnScroll() {
         else {
 
             if (y === 0) {
-                if (!animate_flag) {
-                    animate_flag = true;
                     $('#footer').fadeIn(100);
                 }
             }else {
                 $('#footer').fadeOut(100);
             }
 
-            $('#arrow-down').fadeIn(300);
+            if (!scroll_anime_flag) {
+                scroll_anime_flag = true;
+                $('#arrow-down').fadeIn(300);
+            }
         }
 
     });
