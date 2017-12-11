@@ -56,21 +56,31 @@ function windowOnScroll() {
 
         /*スクロールの位置が下部5%の範囲に来た場合 */
         if ((scrollHeight - scrollPosition) / scrollHeight < 0.03) {
-            $('#footer').fadeIn(100);
-            $('#arrow-down').fadeOut(300);
+            $('#footer').stop(true,true).fadeIn(100);
+            $('#arrow-down').stop(true,true).fadeOut(300);
+            // console.log('footer fade-in and arrow-down fade-out');
         }
         /*それ以外のスクロールの位置の場合 */
         else {
 
             if (y === 0) {
-                $('#footer').fadeIn(100);
+                // console.log('footer fade-in');
+                $('#footer').stop(true,true).fadeIn(100);
             }else {
-                $('#footer').fadeOut(100);
+                // console.log('footer fade-out');
+                $('#footer').stop(true,true).fadeOut(100);
             }
 
-            $('#arrow-down').fadeIn(300);
+            $('#arrow-down').stop(true,true).fadeIn(300);
+            // console.log('arrow-down fade-in');
         }
 
+        // console.log('scroll');
+
     });
+
+    // window.addEventListener("scroll", function () {
+    // 	console.log('scroll');
+    // });
 
 }
