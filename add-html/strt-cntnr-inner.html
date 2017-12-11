@@ -1,0 +1,48 @@
+<style>
+
+    div#start-container {
+        display: none;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%); /* Safari用 */
+        transform: translateY(-50%);
+    }
+
+</style>
+
+<div id="start-container">
+    <div class="container mb-5">
+        <div class="row text-center text-white">
+            <div class="col-2"></div>
+            <div class="col-2" onclick="MenuItem.menuItemOnClick(1);">
+                <i class="fas fa-info fa-5x text-info"></i>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2" onclick="MenuItem.menuItemOnClick(2);">
+                <i class="fas fa-search fa-5x text-success"></i>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-2" onclick="MenuItem.menuItemOnClick(3);">
+                <i class="fas fa-question fa-5x text-warning"></i>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-2"></div>
+            <div id="btn-01" class="box-btn col-2" onclick="MenuItem.menuItemOnClick(1);">
+                <div class="py-2">このサイトについて</div>
+            </div>
+            <div class="col-1"></div>
+            <div id="btn-02" class="box-btn col-2" onclick="MenuItem.menuItemOnClick(2);">
+                <div class="py-2">見つける !</div>
+            </div>
+            <div class="col-1"></div>
+            <div id="btn-03" class="box-btn col-2" onclick="MenuItem.menuItemOnClick(3);">
+                <div class="py-2">チュートリアル</div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+</div>

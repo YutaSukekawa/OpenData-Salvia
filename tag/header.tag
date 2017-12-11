@@ -1,6 +1,9 @@
 <header>
 
 	<div id="header" class="cover bs text-white">
+
+		<div id="page-local-text" class="page-local-text pt-3 ml-3 mr-1">ホゲホゲ</div>
+
 		<div class="text-center">
 			<!-- responsive 対応 -->
 			<h1 class="d-none d-md-inline-block title-text display-4 pt-3"><span class="site-title">{ big_heading }</span></h1>
@@ -94,6 +97,13 @@
 
 		#header {
 			z-index: 10;
+		}
+
+		#page-local-text {
+
+			display: none;
+			position: fixed;
+			color: #336699;
 		}
 
 		/* cover */

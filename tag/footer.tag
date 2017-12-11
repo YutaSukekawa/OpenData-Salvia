@@ -1,11 +1,29 @@
 <footer>
+
+    <div id="arrow-up" class="arrow"><i class="fas fa-chevron-circle-up fa-2x mb-5"></i></div>
+    <div id="arrow-down" class="arrow"><i class="fas fa-chevron-circle-down fa-2x"></i></div>
     <div id="footer" class="text-center py-1">{ footer_text }</div>
 
     <script>
-        this.footer_text = 'OpenData Salvia ver. 1.0.0 © 2017 Yuta Sukekawa.'
+        this.footer_text = 'OpenData Salvia beta © 2017 Yuta Sukekawa.'
     </script>
 
     <style>
+
+        #arrow-up {
+            display: none;
+        }
+
+        .arrow {
+            margin-left: 3vw;
+            /*margin-top: 1vw;*/
+            margin-bottom: 3vw;
+            opacity: 0.4;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
         #footer {
 
             width: 100%;
