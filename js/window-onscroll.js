@@ -67,16 +67,18 @@ function windowOnScroll() {
         if ((scrollHeight - scrollPosition) / scrollHeight < 0.03) {
             if (!scroll_anime_flag) {
                 scroll_anime_flag = true;
-                $('#footer').fadeIn(100);     // firefox ちらつき
-                $('#arrow-down').fadeOut(300);  // firefox 正常
+                $('#footer').fadeIn(100);     // firefox 正常
+                $('#arrow-down').fadeOut(300);  // firefox ちらつき
             }
         }
         /*それ以外のスクロールの位置の場合 */
         else {
             if (!scroll_anime_flag) {
                 scroll_anime_flag = true;
-                if (y >= 10) { $('#footer').fadeOut(100); } // firefox 正常
-                $('#arrow-down').fadeIn(300);
+                if (y >= 10) {
+                    $('#footer').fadeOut(100);  // firefox 正常
+                    $('#arrow-down').fadeIn(300);
+                }
             }
         }
 
