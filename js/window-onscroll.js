@@ -18,7 +18,7 @@ function windowOnScroll() {
         else {
             // $('#footer').fadeIn(100);
 
-            if (y == 0) {
+            if (y <= 0) {
                 $('#footer').fadeIn(100);   // firefox ちらつき
             }else {
                 $('#footer').fadeOut(100);  // firefox 正常
