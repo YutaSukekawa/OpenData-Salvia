@@ -25,6 +25,9 @@
 
             -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
+            -webkit-backface-visibility:hidden;
+			backface-visibility:hidden;
+			overflow:hidden;
         }
 
         #footer {
@@ -42,6 +45,9 @@
 
             -webkit-transform: translate3d(0,0,0);
             transform: translate3d(0,0,0);
+            -webkit-backface-visibility:hidden;
+			backface-visibility:hidden;
+			overflow:hidden;
         }
     </style>
 </footer>

@@ -105,8 +105,12 @@
 			position: fixed;
 			color: #336699;
 
+			/* ちらつき対策 */
 			-webkit-transform: translate3d(0,0,0);
 			transform: translate3d(0,0,0);
+			-webkit-backface-visibility:hidden;
+			backface-visibility:hidden;
+			overflow:hidden;
 		}
 
 		/* cover */
