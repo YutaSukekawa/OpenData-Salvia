@@ -9,6 +9,8 @@ function windowOnScroll() {
         var scrollHeight = $(document).height();
         var scrollPosition = $(window).height() + y;
 
+        var animate_flag = false;
+
         /* 少しでも下にスクロールした場合 */
         if (y >= 10) {
             // $('#footer').fadeOut(100);
@@ -56,31 +58,25 @@ function windowOnScroll() {
 
         /*スクロールの位置が下部5%の範囲に来た場合 */
         if ((scrollHeight - scrollPosition) / scrollHeight < 0.03) {
-            $('#footer').stop(true,true).fadeIn(100);
-            $('#arrow-down').stop(true,true).fadeOut(300);
-            // console.log('footer fade-in and arrow-down fade-out');
+
+            if (!animate_flag) {
+                animate_flag = true;
+                $('#footer').fadeIn(100);
+                $('#arrow-down').fadeOut(300);
+            }
         }
         /*それ以外のスクロールの位置の場合 */
         else {
 
             if (y === 0) {
-                // console.log('footer fade-in');
-                $('#footer').stop(true,true).fadeIn(100);
+                $('#footer').fadeIn(100);
             }else {
-                // console.log('footer fade-out');
-                $('#footer').stop(true,true).fadeOut(100);
+                $('#footer').fadeOut(100);
             }
 
-            $('#arrow-down').stop(true,true).fadeIn(300);
-            // console.log('arrow-down fade-in');
+            $('#arrow-down').fadeIn(300);
         }
 
-        // console.log('scroll');
-
     });
-
-    // window.addEventListener("scroll", function () {
-    // 	console.log('scroll');
-    // });
 
 }
