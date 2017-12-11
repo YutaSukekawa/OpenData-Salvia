@@ -18,11 +18,11 @@ function windowOnScroll() {
         else {
             // $('#footer').fadeIn(100);
 
-            // if (y == 0) {
-            //     $('#footer').fadeIn(100);   // firefox ちらつき
-            // }else {
-            //     // $('#footer').fadeOut(100);  // firefox 正常
-            // }
+            if (y == 0) {
+                $('#footer').fadeIn(100);   // firefox ちらつき
+            }else {
+                $('#footer').fadeOut(100);  // firefox 正常
+            }
 
             $('#arrow-up').fadeOut(300); // firefox 正常
         }
@@ -68,7 +68,8 @@ function windowOnScroll() {
             $('#arrow-down').fadeOut(300);  // firefox 正常
         }
         /*それ以外のスクロールの位置の場合 */
-        else {
+        else if ((scrollHeight - scrollPosition) / scrollHeight > 0.03 &&
+                y >= page_view_point){
             if (y >= 10) {
                 $('#footer').fadeOut(100);      // firefox 正常
                 $('#arrow-down').fadeIn(300);   // ちらつき
