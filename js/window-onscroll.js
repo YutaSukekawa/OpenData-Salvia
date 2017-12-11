@@ -69,12 +69,12 @@ function windowOnScroll() {
         else {
 
             if (y === 0) {
-                $('#footer').fadeIn(100);
-            }else {
                 if (!animate_flag) {
                     animate_flag = true;
-                    $('#footer').fadeOut(100);
+                    $('#footer').fadeIn(100);
                 }
+            }else {
+                $('#footer').fadeOut(100);
             }
 
             $('#arrow-down').fadeIn(300);
