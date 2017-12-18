@@ -71,7 +71,7 @@ class MenuItem {
                     osm_window.style.background = 'none';
 
                     var div_cf = document.getElementById('div-cf');
-                    div_cf.style.marginTop = (browser != 'safari') ? cf_margin_top + 'px' : 0;
+                    div_cf.style.marginTop = cf_margin_top + 'px';
                     div_cf.style.height = document.getElementById('container').clientHeight + 'px';
 
                     /* もし, divタグ start-div が存在したら削除 */
