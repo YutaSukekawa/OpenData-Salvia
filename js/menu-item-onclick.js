@@ -91,6 +91,8 @@ class MenuItem {
                     osm_window.style.marginTop = oc_margin_top + 'px';
                     osm_window.style.left = '15%';
 
+                    if(browser == 'safari') div_cf.style.marginTop = oc_margin_top + 'px';
+
                     /* menu のスタイルを変更 */
                     var contents_find_menu = document.getElementById('menu');
                     var osm_window_height = osm_window.clientHeight - parseInt(osm_window.style.marginTop, 10);
