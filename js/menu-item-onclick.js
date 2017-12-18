@@ -101,6 +101,8 @@ class MenuItem {
                         height: osm_window.clientHeight + 'px',
                         marginTop: oc_margin_top + 'px'}, 400, function() {
 
+                            console.log(oc_margin_top + ' : ' + osm_window.style.marginTop);
+
                             /* アニメーションが終了したら */
                             $('#menu').fadeIn(300);
 
