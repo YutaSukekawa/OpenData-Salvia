@@ -23,6 +23,7 @@
         <script type="text/JavaScript" src="./js/menu-item-onclick.js"></script>
         <script type="text/JavaScript" src="./js/window-onscroll.js"></script>
         <script type="text/JavaScript" src="./js/get-current-position.js"></script>
+        <script type="text/JavaScript" src="./js/get-browser.js"></script>
 
     	<style>
 	        html, body {
@@ -60,6 +61,8 @@
 
         <!-- グローバル変数宣言 -->
         <script>
+
+            var browser = getBrowser();
             var map = null;
             var scroll_anime_flag_footer = false;
             var menu_scroll_stop = false;
