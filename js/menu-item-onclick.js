@@ -72,6 +72,7 @@ class MenuItem {
 
                     var div_cf = document.getElementById('div-cf');
                     div_cf.style.marginTop = cf_margin_top + 'px';
+                    if(browser == 'safari') div_cf.style.marginTop = (cf_margin_top - 20) + 'px';
                     div_cf.style.height = document.getElementById('container').clientHeight + 'px';
 
                     /* もし, divタグ start-div が存在したら削除 */
