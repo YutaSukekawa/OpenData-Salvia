@@ -63,17 +63,32 @@ class MenuItem {
             var footer_rect = document.getElementById('footer').getBoundingClientRect();
             var main_height = footer_rect.top - header_height;
             var osm_window = document.getElementById('map');
-            var cf_margin_top = osm_window.style.marginTop;
+            var cf_margin_top = parseInt(osm_window.style.marginTop, 10);
 
             // osm_window.style.background = 'none';
 
             $.get('add-html/contents-foundation.html', function(html) {
                 $('#container').before(html).ready(function() {
 
-                    $('#div-cf').css('margin-top', cf_margin_top).ready(function() {
-                        osm_window.style.background = 'none';
-                        $('#div-cf').height(document.getElementById('container').clientHeight);
-                    });
+                    // var div_cf_props = {
+                    //     marginTop: cf_margin_top + 'px',
+                    //     height: document.getElementById('container').clientHeight + 'px',
+                    // };
+
+                    // console.log(cf_margin_top);
+
+                    // $('#div-cf').css('margin-top', cf_margin_top).ready(function() {
+                    //     osm_window.style.background = 'none';
+                    // });
+
+                    osm_window.style.background = 'none';
+
+                    var div_cf = document.getElementById('div-cf');
+
+                    div_cf.style.marginTop = cf_margin_top + 'px';
+                    div_cf.style.height = document.getElementById('container').clientHeight + 'px';
+
+                    // $('#div-cf').height(document.getElementById('container').clientHeight);
 
                     /* もし, divタグ start-div が存在したら削除 */
                     if(document.getElementById('start-div')) {
@@ -94,7 +109,6 @@ class MenuItem {
                     /* menu のスタイルを変更 */
                     var contents_find_menu = document.getElementById('menu');
                     var osm_window_height = osm_window.clientHeight - parseInt(osm_window.style.marginTop, 10);
-                    console.log(osm_window.clientHeight);
                     var cfm_margin_top = Math.floor((osm_window_height - osm_window_height * 0.88) / 2);
                     contents_find_menu.style.marginTop = cfm_margin_top + 'px';
 
