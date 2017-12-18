@@ -70,111 +70,110 @@ class MenuItem {
             $.get('add-html/contents-foundation.html', function(html) {
                 $('#container').before(html).ready(function() {
 
-                    $('#div-cf').height(document.getElementById('container').clientHeight).ready(function() {
-                        $('#div-cf').css('margin-top', cf_margin_top).ready(function() {
-                            osm_window.style.background = 'none';
-                        });
+                    $('#div-cf').css('margin-top', cf_margin_top).ready(function() {
+                        osm_window.style.background = 'none';
+                        $('#div-cf').height(document.getElementById('container').clientHeight);
+                    });
 
-                        /* もし, divタグ start-div が存在したら削除 */
-                        if(document.getElementById('start-div')) {
-                            document.getElementById('start-div').remove();
-                        }
+                    /* もし, divタグ start-div が存在したら削除 */
+                    if(document.getElementById('start-div')) {
+                        document.getElementById('start-div').remove();
+                    }
 
-                        /* もし, divタグ start-container が存在したら削除 */
-                        if(document.getElementById('start-container')) {
-                            document.getElementById('start-container').remove();
-                        }
+                    /* もし, divタグ start-container が存在したら削除 */
+                    if(document.getElementById('start-container')) {
+                        document.getElementById('start-container').remove();
+                    }
 
-                        osm_window.style.height = '70vh';
+                    osm_window.style.height = '70vh';
 
-                        var oc_margin_top = Math.floor((main_height - osm_window.clientHeight) / 2);
-                        osm_window.style.marginTop = oc_margin_top + 'px';
-                        osm_window.style.left = '15%';
+                    var oc_margin_top = Math.floor((main_height - osm_window.clientHeight) / 2);
+                    osm_window.style.marginTop = oc_margin_top + 'px';
+                    osm_window.style.left = '15%';
 
-                        /* menu のスタイルを変更 */
-                        var contents_find_menu = document.getElementById('menu');
-                        var osm_window_height = osm_window.clientHeight - parseInt(osm_window.style.marginTop, 10);
-                        console.log(osm_window.clientHeight);
-                        var cfm_margin_top = Math.floor((osm_window_height - osm_window_height * 0.88) / 2);
-                        contents_find_menu.style.marginTop = cfm_margin_top + 'px';
+                    /* menu のスタイルを変更 */
+                    var contents_find_menu = document.getElementById('menu');
+                    var osm_window_height = osm_window.clientHeight - parseInt(osm_window.style.marginTop, 10);
+                    console.log(osm_window.clientHeight);
+                    var cfm_margin_top = Math.floor((osm_window_height - osm_window_height * 0.88) / 2);
+                    contents_find_menu.style.marginTop = cfm_margin_top + 'px';
 
-                        $('#div-cf').animate({
-                            height: osm_window.clientHeight + 'px',
-                            marginTop: oc_margin_top + 'px'}, 400, function() {
+                    $('#div-cf').animate({
+                        height: osm_window.clientHeight + 'px',
+                        marginTop: oc_margin_top + 'px'}, 400, function() {
 
-                                /* アニメーションが終了したら */
-                                $('#menu').fadeIn(300);
+                            /* アニメーションが終了したら */
+                            $('#menu').fadeIn(300);
 
-                                /* 地図表示用にスタイルを変更 */
-                                osm_window.style.width = '60vw';
+                            /* 地図表示用にスタイルを変更 */
+                            osm_window.style.width = '60vw';
 
-                                /* OSM を表示する */
-                                mapboxgl.accessToken = 'pk.eyJ1IjoieXV0YXN1a2VrYXdhIiwiYSI6ImNqN3U4dm9zeDI5a3EzMm8zM3Zha3N0YXMifQ.7c2R5J9mZpJi2Y1dU5AENw';
-                                var map_style = 'mapbox://styles/mapbox/streets-v9';
+                            /* OSM を表示する */
+                            mapboxgl.accessToken = 'pk.eyJ1IjoieXV0YXN1a2VrYXdhIiwiYSI6ImNqN3U4dm9zeDI5a3EzMm8zM3Zha3N0YXMifQ.7c2R5J9mZpJi2Y1dU5AENw';
+                            var map_style = 'mapbox://styles/mapbox/streets-v9';
 
-                                map = new mapboxgl.Map({
-                                    container: 'map',
-                                    style: map_style,
-                                    center: [141.488399, 40.512284],
-                                    zoom: 12,
-                                    minZoom: 6,
-                                    maxZoom: 17,
-                                    pitch: 45,
-                                    hash: true,
-                                    attributionControl: true
-                                });
-                                map.addControl(new mapboxgl.NavigationControl());
+                            map = new mapboxgl.Map({
+                                container: 'map',
+                                style: map_style,
+                                center: [141.488399, 40.512284],
+                                zoom: 12,
+                                minZoom: 6,
+                                maxZoom: 17,
+                                pitch: 45,
+                                hash: true,
+                                attributionControl: true
+                            });
+                            map.addControl(new mapboxgl.NavigationControl());
 
-                                /* マップをロードしたら */
-                                map.on('load', function () {
+                            /* マップをロードしたら */
+                            map.on('load', function () {
 
-                                    /* マーカー */
-                                    var el = document.createElement('div');
-                                    el.id = 'current-position-marker';
-                                    el.className = 'marker';
-                                    el.innerHTML = '<i class="fas fa-map-marker-alt fa-3x faa-bounce animated"></i>';
+                                /* マーカー */
+                                var el = document.createElement('div');
+                                el.id = 'current-position-marker';
+                                el.className = 'marker';
+                                el.innerHTML = '<i class="fas fa-map-marker-alt fa-3x faa-bounce animated"></i>';
 
-                                    /* 現在地を取得する */
-                                    var cp = getCurrentPosition();
+                                /* 現在地を取得する */
+                                var cp = getCurrentPosition();
 
-                                    /* 取得結果の実行 */
-                                    cp.then(function(latlon) {  // 取得成功
+                                /* 取得結果の実行 */
+                                cp.then(function(latlon) {  // 取得成功
 
-                                        /* 現在地にマーカーを立てる */
-                                        new mapboxgl.Marker(el, {offset: [0, -19]})
-                                            .setLngLat([latlon.longitude, latlon.latitude])
-                                            .addTo(map);
+                                    /* 現在地にマーカーを立てる */
+                                    new mapboxgl.Marker(el, {offset: [0, -19]})
+                                        .setLngLat([latlon.longitude, latlon.latitude])
+                                        .addTo(map);
 
-                                        map.flyTo({
-                                            center: [latlon.longitude, latlon.latitude],
-                                            zoom: 15
-                                        });
-
-                                        /* 半径 300m に円を描く */
-                                        // map.addSource("polygon", createGeoJSONCircle([latlon.longitude, latlon.latitude], 0.3));
-                                        //
-                                        // map.addLayer({
-                                        //     "id": "polygon",
-                                        //     "type": "fill",
-                                        //     "source": "polygon",
-                                        //     "layout": {},
-                                        //     "paint": {
-                                        //         "fill-color": "skyblue",
-                                        //         "fill-opacity": 0.5
-                                        //     }
-                                        // });
-
-                                        // map.getSource('polygon').setData(createGeoJSONCircle([-93.6248586, 41.58527859], 1).data);
-
-                                        // Post.postData(latlon);
-
-                                    }, function(reason) {   // 取得失敗
-                                        alert(reason);
+                                    map.flyTo({
+                                        center: [latlon.longitude, latlon.latitude],
+                                        zoom: 15
                                     });
 
+                                    /* 半径 300m に円を描く */
+                                    // map.addSource("polygon", createGeoJSONCircle([latlon.longitude, latlon.latitude], 0.3));
+                                    //
+                                    // map.addLayer({
+                                    //     "id": "polygon",
+                                    //     "type": "fill",
+                                    //     "source": "polygon",
+                                    //     "layout": {},
+                                    //     "paint": {
+                                    //         "fill-color": "skyblue",
+                                    //         "fill-opacity": 0.5
+                                    //     }
+                                    // });
+
+                                    // map.getSource('polygon').setData(createGeoJSONCircle([-93.6248586, 41.58527859], 1).data);
+
+                                    // Post.postData(latlon);
+
+                                }, function(reason) {   // 取得失敗
+                                    alert(reason);
                                 });
 
-                        });
+                            });
+
                     });
 
                 });
