@@ -12,10 +12,6 @@
 
         position: absolute;
 
-        /* top: 50%;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%); */
-
         width: 100%;
         height: auto;
 
@@ -26,15 +22,122 @@
 
     }
 
-    div.div-text {
+    div#menu {
         display: none;
 
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%); /* Safari用 */
-        transform: translateY(-50%);
+        color: snow;
+
+        width: 25vw;
+        height: 85%;
+        margin-left: 5vw;
+
+        cursor: default;
+
+        /* background-color: green; */
+    }
+
+    #menu-table {
+        overflow: scroll;
+        height: 100%;
     }
 
 </style>
 
-<div id="div-cf" class="contents-foundation"></div>
+<div id="div-cf" class="contents-foundation">
+    <div id="menu">
+        <div class="text-left"><i class="fas fa-search"></i> 見つける！</div>
+        <div id="menu-table">
+            <table>
+                <tr>
+                    <td>item1</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var timer = null;
+        $('#menu-table').on('mousewheel', function () {
+
+            if(!menu_scroll_stop) {
+                $('body').css({overflow: 'hidden'});
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    $('body').css({overflow: 'inherit'});
+                }, 200);
+            }
+        });
+    })();
+</script>

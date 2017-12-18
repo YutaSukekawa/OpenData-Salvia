@@ -12,7 +12,7 @@
 			<h2 class="title-text-res d-md-none font-weight-normal display-5 pb-2">{ sub_heading_ja }</h2>
 		</div>
 
-		<div class="container">
+		<div class="container header-menu">
 			<div class="row">
 				<div id="mi-00" class="text-center col-2 d-none d-md-inline-block pt-1 pb-2">
 					{ menu_items[0] }
@@ -157,6 +157,10 @@
 			padding-left: 2%;
 			padding-right: 2%;
 		    width: 100%;
+		}
+
+		.header-menu {
+			font-family: "Mplus 1p";
 		}
 
 		/* menu_item */

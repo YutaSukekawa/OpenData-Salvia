@@ -7,9 +7,6 @@ function windowOnScroll() {
 
         /* スクロール量 */
         var y = jQuery(this).scrollTop();
-        $(window).one('scroll', function() {
-            console.log(y);
-        });
 
         var scrollHeight = $(document).height();
         var scrollPosition = $(window).height() + y;

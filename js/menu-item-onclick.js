@@ -65,10 +65,15 @@ class MenuItem {
             var osm_window = document.getElementById('map');
             var cf_margin_top = osm_window.style.marginTop;
 
-            osm_window.style.background = 'none';
+            // osm_window.style.background = 'none';
 
             $.get('add-html/contents-foundation.html', function(html) {
                 $('#container').before(html).ready(function() {
+
+                    $('#div-cf').height(document.getElementById('container').clientHeight);
+                    $('#div-cf').css('margin-top', cf_margin_top).ready(function() {
+                        osm_window.style.background = 'none';
+                    });
 
                     /* もし, divタグ start-div が存在したら削除 */
                     if(document.getElementById('start-div')) {
@@ -80,25 +85,28 @@ class MenuItem {
                         document.getElementById('start-container').remove();
                     }
 
-                    $('#div-cf').height(document.getElementById('container').clientHeight);
-                    $('#div-cf').css('margin-top', cf_margin_top);
-
                     osm_window.style.height = '70vh';
 
                     var oc_margin_top = Math.floor((main_height - osm_window.clientHeight) / 2);
                     osm_window.style.marginTop = oc_margin_top + 'px';
+                    osm_window.style.left = '15%';
+
+                    /* menu のスタイルを変更 */
+                    var contents_find_menu = document.getElementById('menu');
+                    var osm_window_height = osm_window.clientHeight - parseInt(osm_window.style.marginTop, 10);
+                    console.log(osm_window.clientHeight);
+                    var cfm_margin_top = Math.floor((osm_window_height - osm_window_height * 0.88) / 2);
+                    contents_find_menu.style.marginTop = cfm_margin_top + 'px';
 
                     $('#div-cf').animate({
                         height: osm_window.clientHeight + 'px',
                         marginTop: oc_margin_top + 'px'}, 400, function() {
 
                             /* アニメーションが終了したら */
+                            $('#menu').fadeIn(300);
 
                             /* 地図表示用にスタイルを変更 */
                             osm_window.style.width = '60vw';
-                            // osm_window.style.boxShadow = '0px 10px 10px  rgba(0,0,0,0.5)';
-                            // osm_window.style.border = '1px solid gray';
-                            // osm_window.style.borderRadius = '6px';
 
                             /* OSM を表示する */
                             mapboxgl.accessToken = 'pk.eyJ1IjoieXV0YXN1a2VrYXdhIiwiYSI6ImNqN3U4dm9zeDI5a3EzMm8zM3Zha3N0YXMifQ.7c2R5J9mZpJi2Y1dU5AENw';

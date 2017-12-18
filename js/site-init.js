@@ -107,9 +107,6 @@ function siteInit() {
                 $(contents_div).after(html);
                 $('.contents-under-area').css('height', contents_div.clientHeight + 'px');
                 // var cnts_undr_ara = document.getElementsByClassName('contents-under-area');
-
-
-
             });
 
         });
