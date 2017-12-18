@@ -56,51 +56,122 @@ class MenuItem {
 
     static find() {
 
-        map = null;
+        if(map == null) {
 
-        /* OSM window の位置を調整する */
-        var header_height = document.getElementById('header').clientHeight;
-        var footer_rect = document.getElementById('footer').getBoundingClientRect();
-        var main_height = footer_rect.top - header_height;
-        var osm_window = document.getElementById('map');
+            /* OSM window の位置を調整する */
+            var header_height = document.getElementById('header').clientHeight;
+            var footer_rect = document.getElementById('footer').getBoundingClientRect();
+            var main_height = footer_rect.top - header_height;
+            var osm_window = document.getElementById('map');
+            var cf_margin_top = osm_window.style.marginTop;
 
-        osm_window.style.height = '70vh';
+            osm_window.style.background = 'none';
 
-        var oc_margin_top = Math.floor((main_height - osm_window.clientHeight) / 2);
-        osm_window.style.marginTop = oc_margin_top + 'px';
+            $.get('add-html/contents-foundation.html', function(html) {
+                $('#container').before(html).ready(function() {
 
-        /* 地図表示用にスタイルを変更 */
-        osm_window.style.width = '90vw';
-        osm_window.style.boxShadow = '0px 10px 10px  rgba(0,0,0,0.5)';
-        osm_window.style.border = '1px solid gray';
-        osm_window.style.borderRadius = '6px';
+                    /* もし, divタグ start-div が存在したら削除 */
+                    if(document.getElementById('start-div')) {
+                        document.getElementById('start-div').remove();
+                    }
 
-        /* もし, divタグ start-div が存在したら削除 */
-        if(document.getElementById('start-div')) {
-            document.getElementById('start-div').remove();
+                    /* もし, divタグ start-container が存在したら削除 */
+                    if(document.getElementById('start-container')) {
+                        document.getElementById('start-container').remove();
+                    }
+
+                    $('#div-cf').height(document.getElementById('container').clientHeight);
+                    $('#div-cf').css('margin-top', cf_margin_top);
+
+                    osm_window.style.height = '70vh';
+
+                    var oc_margin_top = Math.floor((main_height - osm_window.clientHeight) / 2);
+                    osm_window.style.marginTop = oc_margin_top + 'px';
+
+                    $('#div-cf').animate({
+                        height: osm_window.clientHeight + 'px',
+                        marginTop: oc_margin_top + 'px'}, 400, function() {
+
+                            /* アニメーションが終了したら */
+
+                            /* 地図表示用にスタイルを変更 */
+                            osm_window.style.width = '60vw';
+                            // osm_window.style.boxShadow = '0px 10px 10px  rgba(0,0,0,0.5)';
+                            // osm_window.style.border = '1px solid gray';
+                            // osm_window.style.borderRadius = '6px';
+
+                            /* OSM を表示する */
+                            mapboxgl.accessToken = 'pk.eyJ1IjoieXV0YXN1a2VrYXdhIiwiYSI6ImNqN3U4dm9zeDI5a3EzMm8zM3Zha3N0YXMifQ.7c2R5J9mZpJi2Y1dU5AENw';
+                            var map_style = 'mapbox://styles/mapbox/streets-v9';
+
+                            map = new mapboxgl.Map({
+                                container: 'map',
+                                style: map_style,
+                                center: [141.488399, 40.512284],
+                                zoom: 12,
+                                minZoom: 6,
+                                maxZoom: 17,
+                                pitch: 45,
+                                hash: true,
+                                attributionControl: true
+                            });
+                            map.addControl(new mapboxgl.NavigationControl());
+
+                            /* マップをロードしたら */
+                            map.on('load', function () {
+
+                                /* マーカー */
+                                var el = document.createElement('div');
+                                el.id = 'current-position-marker';
+                                el.className = 'marker';
+                                el.innerHTML = '<i class="fas fa-map-marker-alt fa-3x faa-bounce animated"></i>';
+
+                                /* 現在地を取得する */
+                                var cp = getCurrentPosition();
+
+                                /* 取得結果の実行 */
+                                cp.then(function(latlon) {  // 取得成功
+
+                                    /* 現在地にマーカーを立てる */
+                                    new mapboxgl.Marker(el, {offset: [0, -19]})
+                                        .setLngLat([latlon.longitude, latlon.latitude])
+                                        .addTo(map);
+
+                                    map.flyTo({
+                                        center: [latlon.longitude, latlon.latitude],
+                                        zoom: 15
+                                    });
+
+                                    /* 半径 300m に円を描く */
+                                    // map.addSource("polygon", createGeoJSONCircle([latlon.longitude, latlon.latitude], 0.3));
+                                    //
+                                    // map.addLayer({
+                                    //     "id": "polygon",
+                                    //     "type": "fill",
+                                    //     "source": "polygon",
+                                    //     "layout": {},
+                                    //     "paint": {
+                                    //         "fill-color": "skyblue",
+                                    //         "fill-opacity": 0.5
+                                    //     }
+                                    // });
+
+                                    // map.getSource('polygon').setData(createGeoJSONCircle([-93.6248586, 41.58527859], 1).data);
+
+                                    // Post.postData(latlon);
+
+                                }, function(reason) {   // 取得失敗
+                                    alert(reason);
+                                });
+
+                            });
+
+                    });
+
+                });
+            });
+
         }
-
-        /* もし, divタグ start-container が存在したら削除 */
-        if(document.getElementById('start-container')) {
-            document.getElementById('start-container').remove();
-        }
-
-        /* OSM を表示する */
-        mapboxgl.accessToken = 'pk.eyJ1IjoieXV0YXN1a2VrYXdhIiwiYSI6ImNqN3U4dm9zeDI5a3EzMm8zM3Zha3N0YXMifQ.7c2R5J9mZpJi2Y1dU5AENw';
-        var map_style = 'mapbox://styles/mapbox/streets-v9';
-
-        map = new mapboxgl.Map({
-            container: 'map',
-            style: map_style,
-            center: [141.488399, 40.512284],
-            zoom: 12,
-            minZoom: 6,
-            maxZoom: 17,
-            pitch: 45,
-            hash: true,
-            attributionControl: true
-        });
-        map.addControl(new mapboxgl.NavigationControl());
     }
 
     static tutorial() {

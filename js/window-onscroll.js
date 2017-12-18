@@ -1,11 +1,15 @@
 function windowOnScroll() {
 
+    var hoge = false;
+
     /* スクロールイベント */
     $(window).on('scroll', function() {
 
         /* スクロール量 */
         var y = jQuery(this).scrollTop();
-        console.log(scroll_anime_flag_footer);
+        $(window).one('scroll', function() {
+            console.log(y);
+        });
 
         var scrollHeight = $(document).height();
         var scrollPosition = $(window).height() + y;

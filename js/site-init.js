@@ -93,11 +93,13 @@ function siteInit() {
             start_ptag.remove();
 
             /* アイコンとロゴを表示 */
-            $.get('add-html/strt-cntnr-inner.html', function(html) {
-                osm_window.innerHTML = html;
-                var start_container = document.getElementById('start-container');
-                $(start_container).fadeIn(500);
-            });
+            if(map == null) {
+                $.get('add-html/strt-cntnr-inner.html', function(html) {
+                    osm_window.innerHTML = html;
+                    var start_container = document.getElementById('start-container');
+                    $(start_container).fadeIn(500);
+                });
+            }
 
         }).then(() => {
 

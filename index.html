@@ -16,11 +16,13 @@
 
         <!-- My CSS -->
         <link rel="stylesheet" href="./css/box-btn.css">
+        <link rel="stylesheet" href="./css/font-awesome-animation.css">
 
         <!-- My JS -->
         <script type="text/JavaScript" src="./js/site-init.js"></script>
         <script type="text/JavaScript" src="./js/menu-item-onclick.js"></script>
         <script type="text/JavaScript" src="./js/window-onscroll.js"></script>
+        <script type="text/JavaScript" src="./js/get-current-position.js"></script>
 
     	<style>
 	        html, body {
@@ -31,17 +33,34 @@
                 height: 100%;   /* 縦の高さを100% */
                 width: 100%;    /* 横の幅を100% */
 
-                /* サイト背景 */
-                /*background-image: linear-gradient(45deg, rgba(104, 175, 104, 0.6), rgba(59, 155, 179, 0.6)),
-                                  url(img/header-cover.jpg);
-                background-size: cover;*/
-
             }
+
+            .block {
+                display: absolute;
+            }
+
+
+            .marker {
+                display: block;
+                border: none;
+                /*border-radius: 50%;*/
+                cursor: pointer;
+                padding: 0;
+            }
+
+            .marker .color-blue {
+                color: blue;
+            }
+
+            #current-position-marker {
+                color: tomato;
+            }
+
 	    </style>
 
         <!-- グローバル変数宣言 -->
         <script>
-            var map;
+            var map = null;
             var scroll_anime_flag_footer = false;
         </script>
 
