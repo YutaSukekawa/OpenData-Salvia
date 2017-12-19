@@ -1,0 +1,11 @@
+[
+    {
+        "item-icon": "<i class=\"fas fa-map-marker-alt fa-fw\"></i>",
+        "item-name": "エリアを指定して探す"
+    },
+
+    {
+        "item-icon": "<i class=\"fas fa-street-view fa-fw\"></i>",
+        "item-name": "現在地から近くのスポットを探す"
+    }
+]

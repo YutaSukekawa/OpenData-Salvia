@@ -58,6 +58,14 @@ class MenuItem {
 
         if(map == null) {
 
+            /* now_menu_HTML の書き換え */
+            now_menu_HTML_gl = '<tr>' +
+                                '<td><span class="table-text" onclick="FindMenu.findFromAdminODOnClick()"><i class="fas fa-user fa-fw"></i> 行政が公開しているオープンデータから見つける</span></td>' +
+                            '</tr>' +
+                            '<tr>' +
+                                '<td><span class="table-text" onclick="FindMenu.findFromOsmODOnClick()"><i class="far fa-map fa-fw"></i> OpenStreetMap から見つける</span></td>' +
+                            '</tr>';
+
             /* OSM window の位置を調整する */
             var header_height = document.getElementById('header').clientHeight;
             var footer_rect = document.getElementById('footer').getBoundingClientRect();
@@ -103,7 +111,7 @@ class MenuItem {
                         height: osm_window.clientHeight + 'px',
                         marginTop: oc_margin_top + 'px'}, 400, function() {
 
-                            console.log(oc_margin_top + ' : ' + osm_window.style.marginTop);
+                            // console.log(oc_margin_top + ' : ' + osm_window.style.marginTop);
 
                             /* アニメーションが終了したら */
                             $('#menu').fadeIn(300);
