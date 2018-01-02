@@ -17,6 +17,7 @@
         <!-- My CSS -->
         <link rel="stylesheet" href="./css/box-btn.css">
         <link rel="stylesheet" href="./css/font-awesome-animation.css">
+        <link rel="stylesheet" href="./css/marker.css">
 
         <!-- My JS -->
         <script type="text/JavaScript" src="./js/site-init.js"></script>
@@ -25,6 +26,7 @@
         <script type="text/JavaScript" src="./js/get-current-position.js"></script>
         <script type="text/JavaScript" src="./js/get-browser.js"></script>
         <script type="text/JavaScript" src="./js/find-menu-class.js"></script>
+        <script type="text/JavaScript" src="./js/create-geojson-circle.js"></script>
 
     	<style>
 	        html, body {
@@ -41,23 +43,6 @@
                 display: absolute;
             }
 
-
-            .marker {
-                display: block;
-                border: none;
-                /*border-radius: 50%;*/
-                cursor: pointer;
-                padding: 0;
-            }
-
-            .marker .color-blue {
-                color: blue;
-            }
-
-            #current-position-marker {
-                color: tomato;
-            }
-
 	    </style>
 
         <!-- グローバル変数宣言 -->
@@ -65,11 +50,22 @@
 
             var browser = getBrowser();
             var map = null;
+            var latlon_gl = null;
             var scroll_anime_flag_footer = false;
             var menu_scroll_stop = false;
 
             var back_menu_HTML_gl = '';
             var now_menu_HTML_gl = '';
+
+            var current_menu_num_gl = 0;
+            var menu_HTML_list_gl = [];
+
+            var map_al_rad_num_gl = 0;
+            var pos_value_gl = '';
+            var marker_icon_HTML_gl = [];
+            var map_marker_gl = null;
+            var current_marker_source_gl = '';
+
         </script>
 
         <title>OpenData Salvia</title>

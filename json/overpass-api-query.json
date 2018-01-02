@@ -1,0 +1,14 @@
+[
+    {
+        "query-number"      : 0,
+        "exe-content"       : "area-search",
+        "exe-content-ja"    : "エリア検索",
+        "opa-query"         : "[out:json];area[\"name\"~\"area-name\"];node(area)[\"Key\"~\"Value\"];(._;>;);out body;"
+    },
+    {
+        "query-number"      : 1,
+        "exe-content"       : "current-pos-search",
+        "exe-content-ja"    : "現在地検索",
+        "opa-query"         : "[out:json];area[\"name\"~\"area-name\"];node(around:radius,latitude,longitude)[\"Key\"~\"Value\"];(._;>;);out body;"
+    }
+]

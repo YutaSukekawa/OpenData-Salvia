@@ -1,0 +1,35 @@
+[
+    {
+        "item-onclick": "",
+        "item-icon": "<i class=\"fas fa-utensils fa-fw\"></i>",
+        "icon-color": "",
+        "item-name": "レストラン",
+        "key": "amenity",
+        "value": "restaurant"
+    },
+
+    {
+        "item-onclick": "",
+        "item-icon": "<i class=\"fas fa-lemon fa-fw\"></i>",
+        "item-name": "ファーストフード",
+        "key": "amenity",
+        "value": "fast_food"
+    },
+
+    {
+        "item-onclick": "",
+        "item-icon": "<i class=\"fas fa-coffee fa-fw\"></i>",
+        "item-name": "カフェ",
+        "key": "amenity",
+        "value": "cafe"
+    },
+
+    {
+        "item-onclick": "",
+        "item-icon": "<i class=\"fas fa-beer fa-fw\"></i>",
+        "item-name": "居酒屋・バー",
+        "key": "amenity",
+        "value": "pub|bar"
+    }
+
+]

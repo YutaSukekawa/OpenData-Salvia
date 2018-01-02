@@ -1,0 +1,19 @@
+.marker {
+    display: block;
+    border: none;
+    /*border-radius: 50%;*/
+    cursor: pointer;
+    padding: 0;
+}
+
+.marker .color-blue {
+    color: blue;
+}
+
+.marker .color-orange {
+    color: orange;
+}
+
+#current-position-marker {
+    color: tomato;
+}

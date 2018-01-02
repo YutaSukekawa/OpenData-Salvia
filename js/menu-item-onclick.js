@@ -59,12 +59,14 @@ class MenuItem {
         if(map == null) {
 
             /* now_menu_HTML の書き換え */
-            now_menu_HTML_gl = '<tr>' +
-                                '<td><span class="table-text" onclick="FindMenu.findFromAdminODOnClick()"><i class="fas fa-user fa-fw"></i> 行政が公開しているオープンデータから見つける</span></td>' +
-                            '</tr>' +
-                            '<tr>' +
-                                '<td><span class="table-text" onclick="FindMenu.findFromOsmODOnClick()"><i class="far fa-map fa-fw"></i> OpenStreetMap から見つける</span></td>' +
-                            '</tr>';
+            menu_HTML_list_gl.push(
+                '<tr>' +
+                    '<td><span class="table-text" onclick="FindMenu.findFromAdminODOnClick()"><i class="fas fa-user fa-fw"></i> 行政が公開しているオープンデータから見つける</span></td>' +
+                '</tr>' +
+                '<tr>' +
+                    '<td><span class="table-text" onclick="FindMenu.findFromOsmODOnClick()"><i class="far fa-map fa-fw"></i> OpenStreetMap から見つける</span></td>' +
+                '</tr>'
+            );
 
             /* OSM window の位置を調整する */
             var header_height = document.getElementById('header').clientHeight;
@@ -138,50 +140,6 @@ class MenuItem {
 
                             /* マップをロードしたら */
                             map.on('load', function () {
-
-                                /* マーカー */
-                                var el = document.createElement('div');
-                                el.id = 'current-position-marker';
-                                el.className = 'marker';
-                                el.innerHTML = '<i class="fas fa-map-marker-alt fa-3x faa-bounce animated"></i>';
-
-                                /* 現在地を取得する */
-                                var cp = getCurrentPosition();
-
-                                /* 取得結果の実行 */
-                                cp.then(function(latlon) {  // 取得成功
-
-                                    /* 現在地にマーカーを立てる */
-                                    new mapboxgl.Marker(el, {offset: [0, -19]})
-                                        .setLngLat([latlon.longitude, latlon.latitude])
-                                        .addTo(map);
-
-                                    map.flyTo({
-                                        center: [latlon.longitude, latlon.latitude],
-                                        zoom: 15
-                                    });
-
-                                    /* 半径 300m に円を描く */
-                                    // map.addSource("polygon", createGeoJSONCircle([latlon.longitude, latlon.latitude], 0.3));
-                                    //
-                                    // map.addLayer({
-                                    //     "id": "polygon",
-                                    //     "type": "fill",
-                                    //     "source": "polygon",
-                                    //     "layout": {},
-                                    //     "paint": {
-                                    //         "fill-color": "skyblue",
-                                    //         "fill-opacity": 0.5
-                                    //     }
-                                    // });
-
-                                    // map.getSource('polygon').setData(createGeoJSONCircle([-93.6248586, 41.58527859], 1).data);
-
-                                    // Post.postData(latlon);
-
-                                }, function(reason) {   // 取得失敗
-                                    alert(reason);
-                                });
 
                             });
 
