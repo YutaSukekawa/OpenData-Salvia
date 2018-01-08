@@ -131,7 +131,7 @@ class MenuItem {
                                 center: [141.488399, 40.512284],
                                 zoom: 12,
                                 minZoom: 6,
-                                maxZoom: 17,
+                                maxZoom: 20,
                                 pitch: 45,
                                 hash: true,
                                 attributionControl: true

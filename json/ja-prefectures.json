@@ -1,0 +1,486 @@
+[
+    {
+        "japanese-regions-name-en" : "Hokkaido-region",
+        "japanese-regions-name-ja" : "北海道地方",
+        "prefectures": [
+            {
+                "prefectures-name": "hokkaido",
+                "prefectures-name-ja": "北海道"
+            }
+        ]
+    },
+
+    {
+        "japanese-regions-name-en" : "Tohoku-region",
+        "japanese-regions-name-ja" : "東北地方",
+        "prefectures": [
+            {
+                "prefectures-name": "aomori",
+                "prefectures-name-ja": "青森県",
+                "city": [
+                    {
+                        "name-en": "Aomori-city",
+                        "name-ja": "青森市"
+                    },
+
+                    {
+                        "name-en": "Hiranai-town",
+                        "name-ja": "平内町"
+                    },
+
+                    {
+                        "name-en": "Imabetsu-town",
+                        "name-ja": "今別町"
+                    },
+
+                    {
+                        "name-en": "Yomogita-village",
+                        "name-ja": "蓬田村"
+                    },
+
+                    {
+                        "name-en": "Sotogahama-town",
+                        "name-ja": "外ヶ浜町"
+                    },
+
+                    {
+                        "name-en": "Hirosaki-city",
+                        "name-ja": "弘前市"
+                    },
+
+                    {
+                        "name-en": "Kuroishi-city",
+                        "name-ja": "黒石市"
+                    },
+
+                    {
+                        "name-en": "Hirakawa-city",
+                        "name-ja": "平川市"
+                    },
+
+                    {
+                        "name-en": "Hishimeya-village",
+                        "name-ja": "西目屋村"
+                    },
+
+                    {
+                        "name-en": "Fujisaki-town",
+                        "name-ja": "藤崎町"
+                    },
+
+                    {
+                        "name-en": "Owani-town",
+                        "name-ja": "大鰐町"
+                    },
+
+                    {
+                        "name-en": "Inakadate-village",
+                        "name-ja": "田舎館村"
+                    },
+
+                    {
+                        "name-en": "Gosyogawara-city",
+                        "name-ja": "五所川原市"
+                    },
+
+                    {
+                        "name-en": "Tsugaru-city",
+                        "name-ja": "つがる市"
+                    },
+
+                    {
+                        "name-en": "Ajigasawa-town",
+                        "name-ja": "鯵ヶ沢町"
+                    },
+
+                    {
+                        "name-en": "Fukaura-town",
+                        "name-ja": "深浦町"
+                    },
+
+                    {
+                        "name-en": "Itayanagi-town",
+                        "name-ja": "板柳町"
+                    },
+
+                    {
+                        "name-en": "Tsuruta-town",
+                        "name-ja": "鶴田町"
+                    },
+
+                    {
+                        "name-en": "Nakadomari-town",
+                        "name-ja": "中泊町"
+                    },
+
+                    {
+                        "name-en": "Towada-city",
+                        "name-ja": "十和田市"
+                    },
+
+                    {
+                        "name-en": "Misawa-city",
+                        "name-ja": "三沢市"
+                    },
+
+                    {
+                        "name-en": "Noheji-town",
+                        "name-ja": "野辺地町"
+                    },
+
+                    {
+                        "name-en": "Shichinohe-town",
+                        "name-ja": "七戸町"
+                    },
+
+                    {
+                        "name-en": "Rokunohe-town",
+                        "name-ja": "六戸町"
+                    },
+
+                    {
+                        "name-en": "Yokohama-town",
+                        "name-ja": "横浜町"
+                    },
+
+                    {
+                        "name-en": "Tohoku-town",
+                        "name-ja": "東北町"
+                    },
+
+                    {
+                        "name-en": "Rokkasyo-village",
+                        "name-ja": "六ヶ所村"
+                    },
+
+                    {
+                        "name-en": "Oirase-town",
+                        "name-ja": "おいらせ町"
+                    },
+
+                    {
+                        "name-en": "Mutsu-city",
+                        "name-ja": "むつ市"
+                    },
+
+                    {
+                        "name-en": "Oma-town",
+                        "name-ja": "大間町"
+                    },
+
+                    {
+                        "name-en": "Higashidouri-village",
+                        "name-ja": "東通村"
+                    },
+
+                    {
+                        "name-en": "Kazamaura-village",
+                        "name-ja": "風間浦村"
+                    },
+
+                    {
+                        "name-en": "Sai-village",
+                        "name-ja": "佐井村"
+                    },
+
+                    {
+                        "name-en": "Hachinohe-city",
+                        "name-ja": "八戸市"
+                    },
+
+                    {
+                        "name-en": "Sannohe-town",
+                        "name-ja": "三戸町"
+                    },
+
+                    {
+                        "name-en": "Gonohe-town",
+                        "name-ja": "五戸町"
+                    },
+
+                    {
+                        "name-en": "Takko-town",
+                        "name-ja": "田子町"
+                    },
+
+                    {
+                        "name-en": "Nanbu-town",
+                        "name-ja": "南部町"
+                    },
+
+                    {
+                        "name-en": "Hashikami-town",
+                        "name-ja": "階上町"
+                    },
+
+                    {
+                        "name-en": "Shingou-village",
+                        "name-ja": "新郷村"
+                    }
+                ]
+            },
+
+            {
+                "prefectures-name": "iwate",
+                "prefectures-name-ja": "岩手県"
+            },
+
+            {
+                "prefectures-name": "miyagi",
+                "prefectures-name-ja": "宮城県"
+            },
+
+            {
+                "prefectures-name": "akita",
+                "prefectures-name-ja": "秋田県"
+            },
+
+            {
+                "prefectures-name": "yamagata",
+                "prefectures-name-ja": "山形県"
+            },
+
+            {
+                "prefectures-name": "fukushima",
+                "prefectures-name-ja": "福島県"
+            }
+        ]
+    },
+
+    {
+        "japanese-regions-name-en" : "Kantou-region",
+        "japanese-regions-name-ja" : "関東地方",
+        "prefectures": [
+            {
+                "prefectures-name": "ibaragi",
+                "prefectures-name-ja": "茨城県"
+            },
+
+            {
+                "prefectures-name": "tochigi",
+                "prefectures-name-ja": "栃木県"
+            },
+
+            {
+                "prefectures-name": "gunma",
+                "prefectures-name-ja": "群馬県"
+            },
+
+            {
+                "prefectures-name": "saitama",
+                "prefectures-name-ja": "埼玉県"
+            },
+
+            {
+                "prefectures-name": "chiba",
+                "prefectures-name-ja": "千葉県"
+            },
+
+            {
+                "prefectures-name": "tokyo",
+                "prefectures-name-ja": "東京都"
+            },
+
+            {
+                "prefectures-name": "kanagawa",
+                "prefectures-name-ja": "神奈川県"
+            }
+        ]
+    },
+
+    {
+        "japanese-regions-name-en" : "Chubu-region",
+        "japanese-regions-name-ja" : "中部地方",
+        "prefectures": [
+            {
+                "prefectures-name": "nigata",
+                "prefectures-name-ja": "新潟県"
+            },
+
+            {
+                "prefectures-name": "toyama",
+                "prefectures-name-ja": "富山県"
+            },
+
+            {
+                "prefectures-name": "ishikawa",
+                "prefectures-name-ja": "石川県"
+            },
+
+            {
+                "prefectures-name": "fukui",
+                "prefectures-name-ja": "福井県"
+            },
+
+            {
+                "prefectures-name": "yamanashi",
+                "prefectures-name-ja": "山梨県"
+            },
+
+            {
+                "prefectures-name": "nagano",
+                "prefectures-name-ja": "長野県"
+            },
+
+            {
+                "prefectures-name": "gifu",
+                "prefectures-name-ja": "岐阜県"
+            },
+
+            {
+                "prefectures-name": "shizuoka",
+                "prefectures-name-ja": "静岡県"
+            },
+
+            {
+                "prefectures-name": "aichi",
+                "prefectures-name-ja": "愛知県"
+            }
+        ]
+    },
+
+    {
+        "japanese-regions-name-en" : "Kinki-region",
+        "japanese-regions-name-ja" : "近畿地方",
+        "prefectures": [
+            {
+                "prefectures-name": "mie",
+                "prefectures-name-ja": "三重県"
+            },
+
+            {
+                "prefectures-name": "shiga",
+                "prefectures-name-ja": "滋賀県"
+            },
+
+            {
+                "prefectures-name": "kyoto",
+                "prefectures-name-ja": "京都府"
+            },
+
+            {
+                "prefectures-name": "osaka",
+                "prefectures-name-ja": "大阪府"
+            },
+
+            {
+                "prefectures-name": "hyogo",
+                "prefectures-name-ja": "兵庫県"
+            },
+
+            {
+                "prefectures-name": "nara",
+                "prefectures-name-ja": "奈良県"
+            },
+
+            {
+                "prefectures-name": "wakayama",
+                "prefectures-name-ja": "和歌山県"
+            }
+        ]
+    },
+
+    {
+        "japanese-regions-name-en" : "Chugoku-region",
+        "japanese-regions-name-ja" : "中国地方",
+        "prefectures": [
+            {
+                "prefectures-name": "tottori",
+                "prefectures-name-ja": "鳥取県"
+            },
+
+            {
+                "prefectures-name": "shimane",
+                "prefectures-name-ja": "島根県"
+            },
+
+            {
+                "prefectures-name": "okayama",
+                "prefectures-name-ja": "岡山県"
+            },
+
+            {
+                "prefectures-name": "hiroshima",
+                "prefectures-name-ja": "広島県"
+            },
+
+            {
+                "prefectures-name": "yamaguchi",
+                "prefectures-name-ja": "山口県"
+            }
+        ]
+    },
+
+    {
+        "japanese-regions-name-en" : "Shikoku-region",
+        "japanese-regions-name-ja" : "四国地方",
+        "prefectures": [
+            {
+                "prefectures-name": "tokushima",
+                "prefectures-name-ja": "徳島県"
+            },
+
+            {
+                "prefectures-name": "kagawa",
+                "prefectures-name-ja": "香川県"
+            },
+
+            {
+                "prefectures-name": "ehime",
+                "prefectures-name-ja": "愛媛県"
+            },
+
+            {
+                "prefectures-name": "kochi",
+                "prefectures-name-ja": "高知県"
+            }
+        ]
+    },
+
+    {
+        "japanese-regions-name-en" : "Kyushu-region",
+        "japanese-regions-name-ja" : "九州地方",
+        "prefectures": [
+            {
+                "prefectures-name": "fukuoka",
+                "prefectures-name-ja": "福岡県"
+            },
+
+            {
+                "prefectures-name": "saga",
+                "prefectures-name-ja": "佐賀県"
+            },
+
+            {
+                "prefectures-name": "nagasaki",
+                "prefectures-name-ja": "長崎県"
+            },
+
+            {
+                "prefectures-name": "kumamoto",
+                "prefectures-name-ja": "熊本県"
+            },
+
+            {
+                "prefectures-name": "oita",
+                "prefectures-name-ja": "大分県"
+            },
+
+            {
+                "prefectures-name": "miyazaki",
+                "prefectures-name-ja": "宮崎県"
+            },
+
+            {
+                "prefectures-name": "kagoshima",
+                "prefectures-name-ja": "鹿児島県"
+            },
+
+            {
+                "prefectures-name": "okinawa",
+                "prefectures-name-ja": "沖縄県"
+            }
+        ]
+    }
+
+]

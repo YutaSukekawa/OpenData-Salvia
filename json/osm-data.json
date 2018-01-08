@@ -2,10 +2,38 @@
     {
         "item-onclick": "",
         "item-icon": "<i class=\"fas fa-utensils fa-fw\"></i>",
-        "icon-color": "",
         "item-name": "レストラン",
         "key": "amenity",
-        "value": "restaurant"
+        "value": "restaurant",
+        "tags": [
+
+            {
+                "_tags-comment": [
+                    "[cuisine]: 料理の国籍や種類, [opening_hours]: 営業時間, [takeaway]: テイクアウトの可否, [delivery]: 出前の可否",
+                    "[drive_through]: ドライブスルーの可否, [wheelchair]: 車椅子に適しているか, [internet_access]: インターネット接続の可否",
+                    "[outdoor_seating]: レストランの中庭・庭・路上などに屋外席があるか, [smoking]: 喫煙/禁煙, [9 ~ 14]: 住所, [phone]: 電話番号"
+                ]
+            },
+
+            {
+                "0": "cuisine",
+                "1": "opening_hours",
+                "2": "takeaway",
+                "3": "delivery",
+                "4": "drive_through",
+                "5": "wheelchair",
+                "6": "internet_access",
+                "7": "outdoor_seating",
+                "8": "smoking",
+                "9": "addr:postcode",
+                "10": "addr:province",
+                "11": "addr:city",
+                "12": "addr:quarter",
+                "13": "addr:neighbourhood",
+                "14": "addr:block_number",
+                "15": "phone"
+            }
+        ]
     },
 
     {
@@ -13,7 +41,36 @@
         "item-icon": "<i class=\"fas fa-lemon fa-fw\"></i>",
         "item-name": "ファーストフード",
         "key": "amenity",
-        "value": "fast_food"
+        "value": "fast_food",
+        "tags": [
+
+            {
+                "_tags-comment": [
+                    "[cuisine]: 料理の国籍や種類, [opening_hours]: 営業時間, [takeaway]: テイクアウトの可否, [delivery]: 出前の可否",
+                    "[drive_through]: ドライブスルーの可否, [wheelchair]: 車椅子に適しているか, [internet_access]: インターネット接続の可否",
+                    "[outdoor_seating]: レストランの中庭・庭・路上などに屋外席があるか, [smoking]: 喫煙/禁煙, [9 ~ 14]: 住所, [phone]: 電話番号"
+                ]
+            },
+
+            {
+                "0": "cuisine",
+                "1": "opening_hours",
+                "2": "takeaway",
+                "3": "delivery",
+                "4": "drive_through",
+                "5": "wheelchair",
+                "6": "internet_access",
+                "7": "outdoor_seating",
+                "8": "smoking",
+                "9": "addr:postcode",
+                "10": "addr:province",
+                "11": "addr:city",
+                "12": "addr:quarter",
+                "13": "addr:neighbourhood",
+                "14": "addr:block_number",
+                "15": "phone"
+            }
+        ]
     },
 
     {
@@ -21,7 +78,36 @@
         "item-icon": "<i class=\"fas fa-coffee fa-fw\"></i>",
         "item-name": "カフェ",
         "key": "amenity",
-        "value": "cafe"
+        "value": "cafe",
+        "tags": [
+
+            {
+                "_tags-comment": [
+                    "[cuisine]: 料理の国籍や種類, [opening_hours]: 営業時間, [takeaway]: テイクアウトの可否, [delivery]: 出前の可否",
+                    "[drive_through]: ドライブスルーの可否, [wheelchair]: 車椅子に適しているか, [internet_access]: インターネット接続の可否",
+                    "[outdoor_seating]: レストランの中庭・庭・路上などに屋外席があるか, [smoking]: 喫煙/禁煙, [9 ~ 14]: 住所, [phone]: 電話番号"
+                ]
+            },
+
+            {
+                "0": "cuisine",
+                "1": "opening_hours",
+                "2": "takeaway",
+                "3": "delivery",
+                "4": "drive_through",
+                "5": "wheelchair",
+                "6": "internet_access",
+                "7": "outdoor_seating",
+                "8": "smoking",
+                "9": "addr:postcode",
+                "10": "addr:province",
+                "11": "addr:city",
+                "12": "addr:quarter",
+                "13": "addr:neighbourhood",
+                "14": "addr:block_number",
+                "15": "phone"
+            }
+        ]
     },
 
     {
@@ -29,7 +115,36 @@
         "item-icon": "<i class=\"fas fa-beer fa-fw\"></i>",
         "item-name": "居酒屋・バー",
         "key": "amenity",
-        "value": "pub|bar"
+        "value": "pub|bar",
+        "tags": [
+
+            {
+                "_tags-comment": [
+                    "[cuisine]: 料理の国籍や種類, [opening_hours]: 営業時間, [takeaway]: テイクアウトの可否, [delivery]: 出前の可否",
+                    "[drive_through]: ドライブスルーの可否, [wheelchair]: 車椅子に適しているか, [internet_access]: インターネット接続の可否",
+                    "[outdoor_seating]: レストランの中庭・庭・路上などに屋外席があるか, [smoking]: 喫煙/禁煙, [9 ~ 14]: 住所, [phone]: 電話番号"
+                ]
+            },
+
+            {
+                "0": "cuisine",
+                "1": "opening_hours",
+                "2": "takeaway",
+                "3": "delivery",
+                "4": "drive_through",
+                "5": "wheelchair",
+                "6": "internet_access",
+                "7": "outdoor_seating",
+                "8": "smoking",
+                "9": "addr:postcode",
+                "10": "addr:province",
+                "11": "addr:city",
+                "12": "addr:quarter",
+                "13": "addr:neighbourhood",
+                "14": "addr:block_number",
+                "15": "phone"
+            }
+        ]
     }
 
 ]

@@ -52,6 +52,20 @@
         color: #FFCC00;
     }
 
+    .table-text2 {
+        font-size: 1.05vw;
+        cursor: pointer;
+        color: moccasin;
+
+        transition: .5s all;
+
+    }
+
+    .table-text2:hover {
+
+        color: #FFCC00;
+    }
+
     #menu-table-div {
         overflow: scroll;
         height: auto;
@@ -64,7 +78,7 @@
     <div id="menu">
         <div class="text-left menu-header"><i class="fas fa-search"></i> 見つける！</div>
         <div id="menu-table-div">
-            <table id="menu-table">
+            <table id="menu-table" style="transition: .5s all;">
                 <tr>
                     <td><span class="table-text" onclick="FindMenu.findFromAdminODOnClick()"><i class="fas fa-user fa-fw"></i> 行政が公開しているオープンデータから見つける</span></td>
                 </tr>

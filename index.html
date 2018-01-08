@@ -27,6 +27,7 @@
         <script type="text/JavaScript" src="./js/get-browser.js"></script>
         <script type="text/JavaScript" src="./js/find-menu-class.js"></script>
         <script type="text/JavaScript" src="./js/create-geojson-circle.js"></script>
+        <script type="text/JavaScript" src="./js/table-from-point-tags.js"></script>
 
     	<style>
 	        html, body {
@@ -63,8 +64,16 @@
             var map_al_rad_num_gl = 0;
             var pos_value_gl = '';
             var marker_icon_HTML_gl = [];
-            var map_marker_gl = null;
+            var map_current_marker_gl = null;
+            var map_marker_gl = [];
             var current_marker_source_gl = '';
+
+            var position_tags_dict_gl = []
+
+            var regions_menu_open_gl = [];
+            var prefectures_menu_open_gl = [];
+
+            var selected_area_gl = '';
 
         </script>
 
