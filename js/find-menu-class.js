@@ -563,7 +563,6 @@ class FindMenu {
                 resolve(result_json);
             });
 
-
         });
 
         function ajax(post_data) {
